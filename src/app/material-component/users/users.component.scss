@@ -1,0 +1,53 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+
+.example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+}
+
+.mat-form-field{
+    font-size: 14px;
+    width: 100%;
+}
+
+
+.mat-table{
+    overflow: auto;
+}
+
+
+.mat-accent{
+    margin-bottom: 10px;
+}
+
+.mat-column-picture {
+    flex: 0 0 100px;
+}
+
+.mat-column-name {
+    flex: 0 0 200px;
+}
+
+.mat-column-age {
+    flex: 0 0 75px;
+}
+
+.mat-column-email {
+    flex: 0 0 300px;
+}
+
+.primary {
+    background-color: #7460ee;
+}
+
+
+
+.animate {
+    background-image: none !important;
+    animation: fadeIt 1s ease-in-out;
+}

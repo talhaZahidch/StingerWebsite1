@@ -1,0 +1,79 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field{
+  font-size: 14px;
+  width: 100%;
+}
+
+.myMatCell {
+  align-items: stretch;
+  height: 80px;
+}
+
+
+.mat-table{
+  overflow: auto;
+}
+
+
+.mat-accent{
+  margin-bottom: 10px;
+}
+
+.mat-cell {
+  min-height: 100%;
+}
+
+
+.customWidthClass {
+  flex: 0 0 100px;
+}
+.customWidthClassPW {
+  flex: 0 0 175px;
+}
+
+.customWidthClassSmall {
+  flex: 0 2 75px;
+}
+
+.customWidthClassMedium {
+  flex: 0 2 125px;
+}
+
+.customWidthClassLarge {
+  flex: 0 2 175px;
+}
+
+.customWidthClassXLarge {
+  flex: 0 2 275px;
+}
+
+
+
+
+
+.animate {
+  background-image: none !important;
+  animation: fadeIt 1s ease-in-out;
+  align-items: stretch;
+}
+
+
+  .mat-radio-button {
+    padding-right: 16px;
+  }
+
+  .button1 {
+    background-color: #ffb300;
+    color: white;
+  }

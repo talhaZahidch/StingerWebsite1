@@ -1,0 +1,228 @@
+<div class="container-fluid">
+        <!-- Content Row -->
+        <div class="row">
+          <!-- Donut Chart -->
+          <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-40">User in Gender</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="row">
+                        
+                  <div class="col-md-6 col-sm-6">
+                    <div class="col-md-4 mb-4 mt-3">
+                            <app-progress [value]="15" [color_class]="'male-bar'" [text_color]="'text_male'"></app-progress>
+                        </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="mt-5"> 
+                      <h4 class="font-weight-bold  text-40">2,300</h4>
+                      <span class="text-40">Male</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row pb-4 pt-1" >
+                  <div class="col-md-6 col-sm-6">
+                    <div class="col-md-4 mb-4 mt-3">
+                            <app-progress [value]="55" [color_class]="'female-bar'" [text_color]="'text_female'"></app-progress>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="mt-5">
+                      <h4 class="font-weight-bold text-40">2,300</h4>
+                      <span class="text-40">Female</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-7">
+            <!-- Area Chart -->
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-40">User on date</h6>
+              </div>
+              <div class="card-body">
+                <div style="width:100%; ">
+                        <div *ngIf="chart">
+                                <canvas id="canvas">{{ chart }}</canvas>
+                              </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-40"><img src="assets/images/newlayout/iphone.png" width="30px"> <span class="align-middle"> App downloaded IOS </span></h6>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-7 col-sm-6">
+                        <div class="col-md-12">
+                                <app-progress [value]="55" [color_class]="'female-bar'" [text_color]="'text_female'"></app-progress>
+                            </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="mt-6">
+                          <span>Female</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-7 col-sm-6">
+                        <div class="col-md-12 mb-2">
+                                <app-progress [value]="15" [color_class]="'male-bar'" [text_color]="'text_male'"></app-progress>
+                            </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="mt-6">
+                          <span>Male</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-4 block">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="circle">
+                          <p>70%</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
+                          <span class="p-35">Mobile</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 block">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="circle">
+                          <p>70%</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
+                          <span class="p-35">Tablet</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 block">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="circle">
+                          <p>70%</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
+                          <span class="p-35">Desktop</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-40"><img src="assets/images/newlayout/android.png" width="30px"> <span class="align-middle"> App downloaded Android </span></h6>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-7 col-sm-6">
+                        <div class="col-md-12">
+                                <app-progress [value]="55" [color_class]="'female-bar'" [text_color]="'text_female'"></app-progress>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="mt-6">
+                          <span>Female</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-7 col-sm-6">
+                        <div class="col-md-12 mb-2">
+                                <app-progress [value]="15" [color_class]="'male-bar'" [text_color]="'text_male'"></app-progress>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="mt-6">
+                          <span>Male</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-4 block">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="circle">
+                          <p>70%</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
+                          <span class="p-35">Mobile</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 block">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="circle">
+                          <p>70%</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
+                          <span class="p-35">Tablet</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 block">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="circle">
+                          <p>70%</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex justify-content-between">
+                          <span class="p-35">Desktop</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+

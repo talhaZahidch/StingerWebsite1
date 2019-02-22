@@ -1,0 +1,26 @@
+<div class="login-register"  style="background-color: #394164">
+    <div class="login-register-box">
+      <mat-card>
+        <mat-card-content style="background-color: #394164">
+          <form [formGroup]="form" (ngSubmit)="resetPassword()">
+            <div class="text-center"><h4 class="m-t-0" style="color: white;">Recover Password</h4></div>  
+            <p class="text-center font-14" style="color: white;">Enter your email and we'll send you the password reset link.</p>
+            <br>
+            <div  fxLayout="column"  fxLayoutAlign="space-around">
+              <div class="pb-1">
+                <mat-form-field style="width: 100%">
+                  <input matInput type="email" [formControl]="form.controls['email']" id="email">
+                  <mat-placeholder class="placeholder">Email Address</mat-placeholder>
+                </mat-form-field>
+                <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="text-danger support-text">You must include an email address.</small>
+                <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="text-danger support-text">You must include a valid email address.</small>
+              </div>
+              <button mat-raised-button color="primary" type="submit"  class="btn-block btn-lg m-t-20" (click)="showSwal('success-message')" [disabled]="!form.valid">Submit</button>
+            </div>
+            
+          </form>
+         </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+

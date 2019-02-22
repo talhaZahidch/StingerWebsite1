@@ -1,0 +1,113 @@
+.background-color {
+    background-color: #394164;
+
+}
+
+.profile-border {
+    border: solid 3px;
+}
+
+@media (min-width: 768px) {
+    .sidebar .nav-item .nav-link span {
+        font-size: 19px;
+        display: inline;
+    }
+}
+
+.inside-navs-li {
+    margin-top: 28px;
+}
+
+.lnr {
+    font-size: 22px !important;
+    color: #ffff !important;
+}
+
+#main .selected {
+    border-left: 4px solid #ffb300;
+    background-color: #464e6f;
+}
+
+#main .selected i {
+    color: #ffb300 !important;
+}
+
+#main .nav-link {
+    padding-left: 26px !important;
+
+}
+
+.size-24 {
+    font-size: 24px;
+    color: #394164;
+}
+
+.form-rounded {
+    border-radius: 1rem;
+}
+
+.has-search .form-control {
+    padding-left: 3.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.input-group-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6e707e;
+    text-align: center;
+    white-space: nowrap;
+    background-color: white;
+    border: 1px solid #d1d3e2;
+    border-radius: .35rem;
+}
+
+.input-border-right {
+    border-right: none;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    .statistics {
+        font-size: 10px;
+    }
+
+}
+
+.topbar .dropdown-list .dropdown-header {
+    background-color: #394164;
+    border: 1px solid #394164;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: #fff;
+}

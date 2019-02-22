@@ -1,0 +1,31 @@
+
+<mat-form-field>
+  <input matInput formControlName="newName"  placeholder="Employee Name">
+</mat-form-field>
+
+<button mat-raised-button (click)="updateName()">Update Name</button>
+<hr>
+
+<mat-form-field>
+  <input matInput formControlName:="newUsername" placeholder="Username">
+</mat-form-field>
+
+<button mat-raised-button (click)="updateUsername()">Update Username</button>
+<hr>
+
+<mat-form-field>
+  <input matInput formControlName:="newEmail"  placeholder="Employee Email">
+
+</mat-form-field>
+
+<button mat-raised-button (click)="updateEmail()">Update Email</button>
+<hr>
+
+<mat-form-field>
+  <input matInput formControlName:="newPhone" placeholder="Employee Phonenumber">
+</mat-form-field>
+
+<button mat-raised-button (click)="updatePhone()">Update Phone</button>
+<hr>
+<button mat-raised-button (click)="updateContact()">Save</button>
+<hr>

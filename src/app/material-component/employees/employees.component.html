@@ -1,0 +1,151 @@
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+      <div class="col-md-12 ">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                  <a class="nav-link active" id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab" aria-controls="pills-info"
+                      aria-selected="true">Employee Info</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="pills-create-tab" data-toggle="pill" href="#pills-create" role="tab" aria-controls="pills-create"
+                      aria-selected="false">Employee Create </a>
+              </li>
+           
+          </ul>
+        <div class="card shadow mb-4">
+          <div class="card-header text-40">Employee </div>
+          <!-- Card Body -->
+          <div class="card-body">
+             
+              <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                  <table mat-table   #table [dataSource]="dataSource" matSort [trackBy]="trackByUid" width="100%" class="table no-border table-borderless table-custom">
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef class="text-40"> Name </th>
+                      <td mat-cell *matCellDef="let user">
+                          <table width="100%" class="border-0 table-borderless no-border">
+                              <tr>
+                                <td class="w-20">
+                                  <div class="">
+                                    <div class="image_outer_container">
+                                      <div class="green_icon"></div>
+                                      <div class="image_inner_container">
+                                          <img [src]="user.photoURL">
+                                        </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="w-10 pt-4">
+                                    <h6 class="text-40 font-weight-bold">   {{ user.name }}</h6>
+                                    <span>{{user.country}} </span>
+                                </td>
+                              </tr>
+                            </table>
+                         
+                        </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="displayname">
+                      <th mat-header-cell *matHeaderCellDef class="text-40"> Username </th>
+                      <td mat-cell *matCellDef="let user" class="align-middle pl-2"> <span class="align-middle">{{ user.displayName }}</span>  </td>
+                    </ng-container>
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef class="text-40">Email </th>
+                        <td mat-cell *matCellDef="let user" class="align-middle pl-2"> <span class="align-middle">{{ user.email }}</span>  </td>
+                      </ng-container>
+                      <ng-container matColumnDef="phoneno">
+                          <th mat-header-cell *matHeaderCellDef class="text-40">Phone No </th>
+                          <td mat-cell *matCellDef="let user" class="align-middle pl-2"> <span class="align-middle">{{ user.phoneno }}</span>  </td>
+                        </ng-container>
+                    <ng-container matColumnDef="edit">
+                        <th mat-header-cell *matHeaderCellDef class="text-40"> Edit </th>
+                        <td mat-cell *matCellDef="let customer" class="align-middle pl-2">  
+                                  <div class="dropdown no-arrow ">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                      aria-expanded="true">
+                                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-40"></i>
+                                    </a>
+                                    <div class="dropdown-menu drop-edit-del shadow animated--fade-in" aria-labelledby="dropdownMenuLink" x-placement="bottom-end"
+                                      style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-156px, 18px, 0px);">
+                                      <button class="btn btn-edit border-radius-o mr-1"  (click)="openDialog(customer)">Edit</button>
+                                      <button class="btn btn-danger  border-radius-o " (click)="deleteCustomer($event, customer)">Delete</button>
+                                      <button mat-raised-button color="warn" class="mt-2" (click)="openDialog(hacker)">Reset Password</button>
+                                    </div>
+                                </div>
+                        </td>
+                      </ng-container>
+                     
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                  <mat-card>
+                      <mat-card-content>
+                        <mat-card-title>Filterable Table</mat-card-title>
+                        <div class="table table-responsive smart-table">
+                          <ng2-smart-table [settings]="settings2" [Source]="source" class="">
+        
+                            
+                          </ng2-smart-table>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>
+          </div>
+          <div class="tab-pane fade show " id="pills-create" role="tabpanel" aria-labelledby="pills-create-tab" [formGroup]='userForm' (ngSubmit)="signup()" >
+              <div fxFlex.gt-sm="250" fxFlex.gt-xs="150">
+                  <mat-card-content>
+                    <!--<mat-form-field>
+                      <input col-6 matInput id="name" name="name" placeholder="Please insert full name of Employee" required>
+                    </mat-form-field>-->
+                    <mat-form-field>
+                      <input matInput placeholder="Email" id="email" name="email" formControlName="email" required autocomplete="new-password">
+                    </mat-form-field>
+                    <!-- <mat-form-field>
+                      <input matInput id="username" name="username" placeholder="Username">
+                    </mat-form-field> -->
+                    <!-- <mat-form-field>
+                      <input matInput id="phoneno" name="phoneno" placeholder="Phonenumber of Employee">
+                    </mat-form-field> -->
+                    <mat-form-field>
+                      <input matInput id="password" name="password" type="password" formControlName="password" placeholder="Password" required
+                        autocomplete="new-password" [type]="hide ? 'text' : 'password'">
+                      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </mat-form-field>
+      
+                    <mat-radio-group>
+                      <mat-radio-button color="primary" value="analyst">Analyst</mat-radio-button>
+                      <mat-radio-button color="accent" value="approver">Approver</mat-radio-button>
+                      <mat-radio-button color="warn" value="admin">Admin</mat-radio-button>
+                    </mat-radio-group>
+                    <br>
+                    <br>
+                    <hr>
+      
+                    <div layout="row" layout-align="end center">
+                      <div>
+                        <button mat-raised-button class="button1 btn-generic" type="submit" (click)="signup()">Create</button>
+                        <!-- <button mat-raised-button color="warn" (click)="openSnackBar(username.value)">Recover Password</button> -->
+                      </div>
+                    </div>
+                  </mat-card-content>
+                </div>
+          </div>
+
+
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+

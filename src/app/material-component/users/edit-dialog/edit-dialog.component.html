@@ -1,0 +1,26 @@
+<!-- 
+  <mat-form-field>
+    <input matInput [(ngModel)]="newEmail" placeholder="new email address">
+  </mat-form-field>
+
+  <button mat-raised-button (click)="updateEmail()">Save</button> -->
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-header"><span class="card-title">Add Item</span></div>
+    <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Add Title" [(ngModel)]="item.title" name="title">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Add Description" [(ngModel)]="item.description" name="description">
+          </div>
+          <input type="submit" value="Submit" class="btn btn-generic">
+
+        </div>
+      </form>
+  </div>
+  </div>
+</div>

@@ -27,7 +27,8 @@
               "src/icon-font.min.css",
               "src/buttons.css",
               "src/assets/fontawesome-free/css/all.min.css",
-              "src/assets/gijgo.min.css"
+              "src/assets/gijgo.min.css",
+              "src/assets/jquery-jvectormap.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -35,7 +36,10 @@
               "src/assets/js/bootstrap.bundle.min.js",
               "src/assets/js/jquery.easing.min.js",
               "src/assets/js/sb-admin-2.min.js",
-              "src/assets/gijgo.min.js"
+              "src/assets/gijgo.min.js",
+              "src/assets/jvectormap.js",
+              "src/assets/jquery-jvectormap.min.js",          
+              "src/assets/jquery-jvectormap-world-mill-en.js"
             ]
           },
           "configurations": {
